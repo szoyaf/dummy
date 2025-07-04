@@ -87,6 +87,25 @@ footer {
   margin-top: 2rem;
 }
 
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   nav ul {

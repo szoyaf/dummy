@@ -21,8 +21,11 @@
     <main>
       <section id="home">
         <h2>Home</h2>
-        <p>Halo! This is a very simple website made with semantic HTML.</p>
+        <p id="welcome-text">
+          Halo! This is a very simple website made with semantic HTML.
+        </p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <button id="change-text-btn">Change Welcome Text</button>
       </section>
 
       <section id="about">
@@ -46,5 +49,26 @@
     <footer>
       <p>&copy; 2025 Simple Website. All rights reserved.</p>
     </footer>
+
+    <script>
+      document
+        .getElementById("change-text-btn")
+        .addEventListener("click", function () {
+          const welcomeText = document.getElementById("welcome-text");
+          const messages = [
+            "Halo! This is a very simple website made with semantic HTML.",
+            "Welcome! You clicked the button and changed this text!",
+            "JavaScript is awesome for making interactive websites!",
+            "Click again to see another message!",
+            "This is the power of DOM manipulation!",
+          ];
+
+          const currentText = welcomeText.textContent;
+          const currentIndex = messages.indexOf(currentText);
+
+          const nextIndex = (currentIndex + 1) % messages.length;
+          welcomeText.textContent = messages[nextIndex];
+        });
+    </script>
   </body>
 </html>
